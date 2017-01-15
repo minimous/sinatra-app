@@ -1,0 +1,63 @@
+.contact-info {
+	margin-top: 50px;
+	background-color: white;
+	display: block;
+	overflow: auto;
+	position: relative;
+}
+
+.map {
+	float: left;
+}
+
+.addresses {
+	margin-top: 20px;
+	margin-left: 20px;
+	float: left;
+	width: 60%;
+}
+
+.address {
+	color: #424242;
+}
+
+.user-input {
+	margin-top: 30px;
+}
+
+#name-input {
+	margin-bottom: 20px;
+}
+
+#email-input {
+	margin-bottom: 20px;
+}
+
+#message-input {
+	margin-top: 20px;
+	height: 400px;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+textarea[type="text"] {
+  display: block;
+  margin: 0;
+  width: 100%;
+  font-family: sans-serif;
+  height: 39px;
+  font-size: 16px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  padding-top: 10px;
+}
+
+textarea[type="text"]:focus {
+  outline: none;
+}
+
+textarea::-webkit-input-placeholder {
+	padding-left: 10px;
+}
+

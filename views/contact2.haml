@@ -1,0 +1,202 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    %title Deco Blog
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %link{:href => "css/font-awesome.min.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "css/bootstrap.min.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "css/styles.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "css/contact.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Oxygen:300,400,700", :rel => "stylesheet"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Montserrat", :rel => "stylesheet"}/
+  %body
+    %header
+      %nav#header-nav.navbar.navbar-default
+        .container
+          .navbar-header
+            .navbar-brand
+              %a{:href => "index.html"}
+                %img#brand{:src => "images/logo.png"}/
+            .dropdown
+              %button.btn.btn-primary.dropdown-toggle{"data-toggle" => "dropdown", :type => "button"}
+                %span
+                  %img{:height => "35px", :src => "images/hamburger-icon.png", :width => "35px"}/
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "#"} Contact us
+                %li
+                  %a{:href => "about.html"} About
+            %button.pull-right.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#collapsable-nav", "data-toggle" => "collapse", :type => "button"}
+              %span.sr-only Toggle navigation
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+          #collapsable-nav.collapse.navbar-collapse
+            %ul#nav-list.nav.navbar-nav.navbar-right
+              %li.visible-xs
+                %a{:href => "#"}
+                  %span.glyphicon.glyphicon-home
+              %li
+                %a{:href => "#"}
+                  %span.fa.fa-lg.fa-rss
+              %li
+                %a{:href => "#"}
+                  %span.fa.fa-lg.fa-facebook
+              %li
+                %a{:href => "#"}
+                  %span.fa.fa-lg.fa-twitter
+              %li
+                %a{:href => "#"}
+                  %span.fa.fa-lg.fa-tumblr
+              %li
+                %a{:href => "#"}
+                  %span.glyphicon.glyphicon-search
+        / end tag container
+    .main-content2
+      .row
+        .col-lg-9.col-md-9.col-sm-9.col-xs-12
+          / content bar
+          .contact-info
+            %iframe.map{:allowfullscreen => "", :frameborder => "0", :height => "300px", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d677.7815556621442!2d108.21134106640123!3d16.059704157270673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219b5d1b05c31%3A0x763eb35e05a644d1!2zMTU1IE5ndXnhu4VuIFbEg24gTGluaCwgVsSpbmggVHJ1bmcsIFEuIFRoYW5oIEtow6osIMSQw6AgTuG6tW5nLCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1479368124927", :style => "border:0", :width => "33%"}
+            .addresses
+              %label Contact information
+              %hr/
+              %br/
+              %section.address
+                In case you have some questions poped in your mind, feel free to email or even visit us.
+                %br/
+                %br/
+                = succeed "\u{a0}" do
+                  %img{:src => "images/address-icon.png"}/
+                  Address: 155 Nguyen Van Linh, Vinh Trung, Q. Thanh Khe, Da Nang, Vietnam/
+                %br/
+                = succeed "\u{a0}" do
+                  %img{:src => "images/email-icon.png"}/
+                  Email: info@lifestyle.com/
+                %br/
+                = succeed "\u{a0}" do
+                  %img{:src => "images/website-icon.png"}/
+                  www.lifestyle.com/
+                %br/
+          .user-input
+            .row
+              .col-lg-6.col-md-6.col-sm-12.col-xs-12
+                %input#name-input.style-the-glow{:name => "name", :placeholder => "YOUR NAME", :type => "text"}/
+              .col-lg-6.col-md-6.col-sm-12.col-xs-12
+                %input#email-input.style-the-glow{:name => "email", :placeholder => "YOUR EMAIL ADDRESS", :type => "text"}/
+              .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                %input#website-input.style-the-glow{:name => "website", :placeholder => "WEBSITE ADDRESS", :type => "text"}/
+              .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                %textarea#message-input.style-the-glow{:name => "message", :placeholder => "PLEASE WROTE A MESSAGE HERE!", :type => "text"}
+            %a{:href => "#"}
+              %img{:src => "images/send-message-button.png"}/
+        / close content bar
+        .col-lg-3.col-md-3.col-sm-3.hidden-xs.sidebar
+          / sidebar
+          .sidebar-content
+            .seach
+              %input#search-bar.style-the-glow{:name => "search", :placeholder => "SEARCH", :style => "background-color: #f9f9fb; width: 77%; float: left; height: 50px;", :type => "text"}/
+              %a{:href => ""}
+                %img.search-button{:src => "images/search-button.png"}/
+            %a{:href => "#"}
+              %img.adsen{:src => "images/adsen2.png"}/
+            .latest-posts
+              %p.text-center.latest-post-label Latest Post
+              %hr/
+              %ul.latest-post.row
+                %li
+                  %a.latest-posts-img.col-lg-4.col-md-4.col-sm-4{:href => "#"}
+                    %img{:src => "images/sample-img-sm1.png"}/
+                  .latest-post-content.col-lg-8.col-md-8.col-sm-8
+                    %a.post-title.latest-post-title{:href => "#"}
+                      Journey towards a lifestyle
+                    .latest-post-info
+                      %p.latest-post-date Jan, 16 2016
+                      %p.like Like 255
+                  %hr/
+                %li
+                  %a.latest-posts-img.col-lg-4.col-md-4.col-sm-4{:href => "#"}
+                    %img{:src => "images/sample-img-sm2.png"}/
+                  .latest-post-content.col-lg-8.col-md-8.col-sm-8
+                    %a.post-title.latest-post-title{:href => "#"}
+                      Fashionable shoes for men
+                    .latest-post-info
+                      %p.latest-post-date Jan, 18 2016
+                      %p.like Like 25
+                  %hr/
+                %li
+                  %a.latest-posts-img.col-lg-4.col-md-4.col-sm-4{:href => "#"}
+                    %img{:src => "images/sample-img-sm1.png"}/
+                  .latest-post-content.col-lg-8.col-md-8.col-sm-8
+                    %a.post-title.latest-post-title{:href => "#"}
+                      Really Awesome adventure
+                    .latest-post-info
+                      %p.latest-post-date Jan, 16 2016
+                      %p.like Like 255
+                  %hr/
+                %li
+                  %a.latest-posts-img.col-lg-4.col-md-4.col-sm-4{:href => "#"}
+                    %img{:src => "images/sample-img-sm2.png"}/
+                  .latest-post-content.col-lg-8.col-md-8.col-sm-8
+                    %a.post-title.latest-post-title{:href => "#"}
+                      Man hunting in jungle
+                    .latest-post-info
+                      %p.latest-post-date Jan, 23 2016
+                      %p.like Like 255
+                  %hr/
+            .social-icons
+              %a{:href => "#"}
+                %img{:src => "images/fb-icon.png"}/
+              %a{:href => "#"}
+                %img{:src => "images/tw-icon.png"}/
+              %a{:href => "#"}
+                %img{:src => "images/linked-icon.png"}/
+            %iframe.fb-iframe{:allowtransparency => "true", :frameborder => "0", :height => "300px", :scrolling => "no", :src => "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=300&height=300&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId", :style => "border:none;overflow:hidden", :width => "100%"}
+        / close sidebar
+      / close row
+    / close main-content
+    %footer.panel-footer
+      .footer-container
+        .row
+          %section#about.footer-block.col-lg-3.col-md-3.col-sm-3
+            %span.footer-block-title About Blog
+            %br/
+            %br/
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            %br/
+            %br/
+            %img{:src => "images/signature.png", :width => "90%"}/
+          %section#tweets.footer-block.col-lg-3.col-md-3.col-sm-3
+            %span.footer-block-title Latest tweets
+            %br/
+            %br/
+            %span.fa.fa-lg.fa-twitter @Twitter@magical
+            %br/
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+          %section#follow.footer-block.col-lg-3.col-md-3.col-sm-3
+            %span.footer-block-title Follow me instagram
+            %br/
+            %br/
+            %a{:href => "#"}
+              %img{:src => "images/followme.jpg", :width => "90%"}/
+          %section#about.footer-block.col-lg-3.col-md-3.col-sm-3
+            %span.footer-block-title Latest comment
+            %br/
+            %br/
+            %span From Alex :
+            %br/
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+            %br/
+            %br/
+            %br/
+            %span From John :
+            %br/
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+      .end-footer.text-center © 2016 COPYRIGHT ALL RIGHT RESERVED BY KHANHHOAI
+    %script{:src => "js/jquery-2.1.4.min.js"}
+    %script{:src => "js/bootstrap.min.js"}
+    / <script src="js/npm.js"></script>
+    %script{:src => "js/script.js"}

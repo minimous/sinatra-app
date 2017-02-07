@@ -16,7 +16,7 @@
 			<div class="container">
 				<div class="navbar-header">
 					<div class="navbar-brand">
-						<a href="index2.html"><img id="brand" src="images/logo.png"></a>
+						<a href="index2"><img id="brand" src="images/logo.png"></a>
 					</div>
 
 					<div class="dropdown">
@@ -24,8 +24,8 @@
 					  	<span><img src="images/hamburger-icon.png" width="35px" height="35px"></span>
 					  </button>
 					  <ul class="dropdown-menu">
-					    <li><a href="contact-us.html">Contact us</a></li>
-					    <li><a href="about.html">About</a></li>
+					    <li><a href="contact">Contact us</a></li>
+					    <li><a href="about">About</a></li>
 					  </ul>
 					</div>
 
@@ -132,6 +132,46 @@
 	</div> <!-- close newsletter -->
 	
 	<div class="main-content">
+		<% @posts.each do |i| %>
+			<% if i.type != "quote" && i.type != "link" %>
+				<div class="post">
+					<a href="#"><img src="images/<%=i.type%>-icon.png" class="type-icon"></a>
+					<div class="post-content">
+						<section class="post-category text-center"><%=i.category%></section>
+						<section class="post-title text-center"><%=i.title%></section>
+						<section class="post-date text-center"><%=i.date%></section>
+						<p class="post-preview"><%=i.preview%></p>
+					</div>
+					<a href="#"><img class="readmore-button" src="images/readmore.png"></a>
+					<hr class="line">
+					<div class="post-bottom">
+						<p class="comment">
+							<img src="images/comment-icon.png"> <%=i.comment == 0 ? "NO COMMENT" : i.comment.to_s+" COMMENTS"%>
+						</p>
+						<div class="social">
+							<a href="#"><img src="images/fb-icon.png"></a>
+							<a href="#"><img src="images/tw-icon.png"></a>
+						</div>
+					</div>
+				</div>
+			<% elsif i.type == "quote" %>
+				<div class="post <%=i.type%>">
+					<img src="images/<%=i.type%>-icon.png" class="type-icon">
+					<div class="post-content">
+						<p class="post-preview quote"><%=i.preview%></p>
+						<section class="author-name text-center"><%=i.author%></section>
+					</div>
+				</div>
+			<% else %>
+				<div class="post link">
+					<img src="images/link-icon.png" class="type-icon">
+					<div class="post-content text-center">
+						<a href="<%=i.preview%>" class="post-preview link-text"><%=i.preview%></a>
+					</div>
+				</div>
+			<% end %>
+		<% end %>
+
 		<div id="post1" class="post">
 			<a href="#"><img src="images/article-icon.png" class="type-icon"></a>
 			<div class="post-content">
